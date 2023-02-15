@@ -3,20 +3,17 @@ import pygame
 pygame.init()
 
 screen = pygame.display.set_mode()
-screen.fill("white")
-pygame.display.flip()
-pygame.time.wait(5000)
+dimensions = screen.get_size()
+starting_point = (dimensions[0] // 2, dimensions[1] // 2 + 120)
 
-screen_size = screen.get_size()
-dimensions = [screen_size[0] / 2, screen_size[1] / 2, 250, 250]
-dimensions = [[500, 500], 100]
-pygame.draw.circle(screen, "red", dimensions)
+pygame.draw.circle(screen, "blue", starting_point, 200)
 
-dimensions = [[500, 450], 250]
-pygame.draw.circle(screen, "blue", dimensions)
+starting_point = (dimensions[0] // 2, dimensions[1] // 2 - 200)
+pygame.draw.circle(screen, "yellow", starting_point, 120)
 
-dimensions = [[500, 400], 250]
-pygame.draw.circle(screen, "yellow", dimensions)
+starting_point = (dimensions[0] // 2, dimensions[1] // 2 - 390)
+pygame.draw.circle(screen, "red", starting_point, 70)
 
 pygame.display.flip()
+pygame.time.wait(1000)
 input()
