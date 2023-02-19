@@ -42,3 +42,122 @@ import math
 
 pygame.init()
 window = pygame.display.set_mode()
+window.fill("white")
+pygame.time.wait(1000)
+
+#triangle
+points = []
+num_sides = 3
+side_length = 200
+xpos = 750
+ypos = 400
+
+for i in range(num_sides):
+    angle = 360/num_sides
+    radians = math.radians(angle * i)
+    x = xpos + side_length * math.cos(radians)
+    y = ypos + side_length * math.sin(radians)
+    points.append([x,y])
+pygame.draw.polygon(window, "red", points)
+pygame.display.flip()
+pygame.time.wait(1000)
+
+window.fill("white")
+pygame.display.flip()
+
+#square
+points = []
+num_sides = 4
+side_length = 200
+xpos = 750
+ypos = 400
+
+for i in range(num_sides):
+    angle = 360/num_sides
+    radians = math.radians(angle * i)
+    x = xpos + side_length * math.cos(radians)
+    y = ypos + side_length * math.sin(radians)
+    points.append([x,y])
+pygame.draw.polygon(window, "blue", points)
+pygame.display.flip()
+pygame.time.wait(1000)
+
+window.fill("white")
+pygame.display.flip()
+
+#hexagon
+points = []
+num_sides = 6
+side_length = 200
+xpos = 750
+ypos = 400
+
+for i in range(num_sides):
+    angle = 360/num_sides
+    radians = math.radians(angle * i)
+    x = xpos + side_length * math.cos(radians)
+    y = ypos + side_length * math.sin(radians)
+    points.append([x,y])
+pygame.draw.polygon(window, "yellow", points)
+pygame.display.flip()
+pygame.time.wait(1000)
+
+window.fill("white")
+pygame.display.flip()
+
+#icosagon
+points = []
+num_sides = 20
+side_length = 200
+xpos = 750
+ypos = 400
+
+for i in range(num_sides):
+    angle = 360/num_sides
+    radians = math.radians(angle * i)
+    x = xpos + side_length * math.cos(radians)
+    y = ypos + side_length * math.sin(radians)
+    points.append([x,y])
+pygame.draw.polygon(window, "green", points)
+pygame.display.flip()
+pygame.time.wait(1000)
+
+window.fill("white")
+pygame.display.flip()
+
+#hectagon
+points = []
+num_sides = 100
+side_length = 200
+xpos = 750
+ypos = 400
+
+for i in range(num_sides):
+    angle = 360/num_sides
+    radians = math.radians(angle * i)
+    x = xpos + side_length * math.cos(radians)
+    y = ypos + side_length * math.sin(radians)
+    points.append([x,y])
+pygame.draw.polygon(window, "indigo", points)
+pygame.display.flip()
+pygame.time.wait(1000)
+
+window.fill("white")
+pygame.display.flip()
+
+#circle
+points = []
+num_sides = 360
+side_length = 200
+xpos = 750
+ypos = 400
+
+for i in range(num_sides):
+    angle = 360/num_sides
+    radians = math.radians(angle * i)
+    x = xpos + side_length * math.cos(radians)
+    y = ypos + side_length * math.sin(radians)
+    points.append([x,y])
+pygame.draw.polygon(window, "violet", points)
+pygame.display.flip()
+pygame.time.wait(1000)
