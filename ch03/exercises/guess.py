@@ -1,7 +1,7 @@
 import random
 random = random.randrange(1,11)
 
-for guess in range(2):
+for guess in range(3):
     guess = int(input("Guess the number:"))
     if guess == random:
         print("correct!")
@@ -11,4 +11,4 @@ for guess in range(2):
     elif guess < random:
         print("too low!")
 
-print("the correct answer is ")
+print("the correct answer is", random)
