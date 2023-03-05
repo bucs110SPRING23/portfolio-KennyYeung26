@@ -31,6 +31,7 @@ point_red = 0
 point_blue = 0
 chosen = None
 
+#User Choice
 while (chosen is None):
     for event in pygame.event.get():
         if event.type == pygame.MOUSEBUTTONDOWN:
@@ -39,6 +40,7 @@ while (chosen is None):
             if hitboxes["Blue"].collidepoint(event.pos):
                 chosen = "Blue"
 
+#Main Loop
 while round < 10:
     x_cor = random.randrange(0, 901)
     y_cor = random.randrange(0, 901)
@@ -67,6 +69,7 @@ while round < 10:
             pygame.time.wait(1000)
     round = round + 1
 
+#Text Display
 for score in range(1):
     font = pygame.font.Font(None, 48)
     if point_red == point_blue:
@@ -78,6 +81,8 @@ for score in range(1):
        screen.blit(text2, (444, 500))
        text3 = font.render(str(point_blue), True, "blue")
        screen.blit(text3, (464, 500))
+       text4 = font.render("User's Guess is INCORRECT!", True, "white")
+       screen.blit(text4, (230, 550))
        pygame.display.flip()
        pygame.time.wait(1000)
     elif point_red > point_blue:
@@ -89,6 +94,12 @@ for score in range(1):
         screen.blit(text2, (444, 500))
         text3 = font.render(str(point_blue), True, "blue")
         screen.blit(text3, (464, 500))
+        if chosen == "Red":
+            text4 = font.render("User's Guess Red is CORRECT!", True, "white")
+            screen.blit(text4, (230, 550))
+        elif chosen == "Blue":
+            text4 = font.render("User's Guess Blue is INCORRECT!", True, "white")
+            screen.blit(text4, (230, 550))
         pygame.display.flip()
         pygame.time.wait(1000)
     elif point_red < point_blue:
@@ -100,6 +111,12 @@ for score in range(1):
         screen.blit(text2, (444, 500))
         text3 = font.render(str(point_blue), True, "blue")
         screen.blit(text3, (464, 500))
+        if chosen == "Red":
+            text4 = font.render("User's Guess Red is INCORRECT!", True, "white")
+            screen.blit(text4, (230, 550))
+        elif chosen == "Blue":
+            text4 = font.render("User's Guess Blue is CORRECT!", True, "white")
+            screen.blit(text4, (230, 550))
         pygame.display.flip()
         pygame.time.wait(1000)
 
