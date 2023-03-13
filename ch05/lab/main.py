@@ -1,7 +1,5 @@
 import pygame
 
-#Part A:
-
 def threenp1(n):
     while not n == 1:
         count = 0
@@ -31,7 +29,7 @@ def graph_coordinates(threenplus1_iters_dict):
         for i in range(len(dictionary)):
             if (dictionary[i][1] > max_so_far):
                 max_so_far = dictionary[i][1]
-        new_display = pygame.transform.flip(display, False, True)
+        new_display = pygame.transform.flip(display, False, False)
         width, height = new_display.get_size()
         new_display = pygame.transform.scale(new_display, (width * 5, height * 5))
         display.blit(new_display, (0, 0))
