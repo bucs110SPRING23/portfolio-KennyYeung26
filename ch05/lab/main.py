@@ -25,18 +25,18 @@ def main():
 
 main()
 
-
-
 def graph_coordinates(threenplus1_iters_dict):
     pygame.init()
-    display = pygame.display.set_mode()
-    dimensions = display.get_size()
-    pygame.display.flip()
-    pygame.time.wait(1000)
-    pygame.draw.lines(display, "blue", False, list(threenplus1_iters_dict.items()))
-    new_display = pygame.transform.flip(display, False, True)
-    width, height = new_display.get_size()
-    new_display = pygame.transform.scale(new_display, (width * 5, height * 5))
-    display.blit(new_display, (0, 0))
-
+    while 1:
+        pygame.event.pump()
+        screen = pygame.display.set_mode()
+        dimensions = screen.get_size()
+        pygame.draw.lines(screen, "blue", False, list(threenplus1_iters_dict.items()))
+        new_display = pygame.transform.flip(screen, False, True)
+        width, height = new_display.get_size()
+        new_display = pygame.transform.scale(new_display, (width * 5, height * 5))
+        screen.blit(new_display, (0, 0))
+        pygame.display.flip()
+        break
+    pygame.time.wait(6000)
 graph_coordinates(threenp1range(10))
