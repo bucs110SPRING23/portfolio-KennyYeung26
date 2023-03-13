@@ -20,23 +20,30 @@ def threenp1range(upper_limit):
         objs_in_sequence[i] = count
     return objs_in_sequence
 
-def main():
-    print(threenp1range(10))
-
-main()
-
 def graph_coordinates(threenplus1_iters_dict):
     pygame.init()
     while 1:
         pygame.event.pump()
-        screen = pygame.display.set_mode()
-        dimensions = screen.get_size()
-        pygame.draw.lines(screen, "blue", False, list(threenplus1_iters_dict.items()))
-        new_display = pygame.transform.flip(screen, False, True)
+        display = pygame.display.set_mode()
+        pygame.draw.lines(display, "blue", False, list(threenplus1_iters_dict.items()))
+        dictionary = list(threenplus1_iters_dict.items())
+        max_so_far = 0
+        for i in range(len(dictionary)):
+            if (dictionary[i][1] > max_so_far):
+                max_so_far = dictionary[i][1]
+        new_display = pygame.transform.flip(display, False, True)
         width, height = new_display.get_size()
         new_display = pygame.transform.scale(new_display, (width * 5, height * 5))
-        screen.blit(new_display, (0, 0))
+        display.blit(new_display, (0, 0))
+        font = pygame.font.Font(None, 48)
+        msg = font.render(("Max so far is: "+ str(max_so_far)), False, "Blue")
+        display.blit(msg, (1150,10))
         pygame.display.flip()
         break
     pygame.time.wait(6000)
-graph_coordinates(threenp1range(10))
+
+def main():
+    print(threenp1range(20))
+    graph_coordinates(threenp1range(20))
+
+main()
