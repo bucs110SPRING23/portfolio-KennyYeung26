@@ -57,7 +57,7 @@ def reposition(x,y):
     pen2.down()
 
 def head():
-    pen1.left(90)
+    pen1.left(90)   #head outer outline
     pen1.up()
     pen1.forward(200)
     pen1.down()
@@ -81,7 +81,7 @@ def head():
     direction2(40,130)
     direction1(70,90)
     direction2(20,100)
-    pen1.color("red")
+    pen1.color("red")   #mouth
     pen2.color("red")
     direction1(30,30)
     direction1(56,110)
@@ -138,7 +138,7 @@ def head():
     direction1(30,52)
     pen1.forward(23)
     pen2.forward(23)
-    reposition(29.57,-72.56)    #right eye
+    reposition(29.57,-72.56)    #eyes
     pen1.right(120)
     pen1.color("green")
     pen2.left(120)
@@ -148,7 +148,7 @@ def head():
     direction2(65,70)
     pen1.forward(19)
     pen2.forward(19)
-    reposition(116.85,-67.70)   #right cheek
+    reposition(116.85,-67.70)   #cheeks
     pen1.right(160)
     pen1.color("black")
     pen2.left(160)
@@ -156,7 +156,7 @@ def head():
     direction1(15,32)
     pen1.forward(85)
     pen2.forward(85)
-    reposition(23.08,-75.18)
+    reposition(23.08,-75.18)    #center red piece
     pen1.right(200)
     pen2.left(200)
     pen1.color("red")
@@ -164,7 +164,7 @@ def head():
     direction2(45,40)
     direction2(60,50)
     direction1(18,0)
-    reposition(17.95,23.49)
+    reposition(17.95,23.49)   #shape above red piece
     pen1.right(85)
     pen2.left(85)
     pen1.color("black")
@@ -176,7 +176,7 @@ def head():
     pen1.right(125)
     pen2.left(125)
     direction2(54,0)
-    reposition(23.08,-75.18)
+    reposition(23.08,-75.18)    #horns/antennas
     pen1.right(30)
     pen2.left(30)
     direction2(142,45)
@@ -190,17 +190,16 @@ def head():
     pen2.right(60)
     direction1(33,45)
     direction1(20,0)
-    reposition(80,60)
+    reposition(80,60)   #circles
     pen1.circle(20)
     pen2.circle(-20)
-    reposition(-0.59,-103.81)
+    reposition(-0.59,-103.81)   #give dimension to center red piece
     pen1.right(117)
     pen2.left(117)
     pen1.color("red")
     pen2.color("red")
     direction1(30,40)
     direction1(60,0)
-    # print(pen1.position())
 
 def sunrays(radians):
     '''
@@ -224,7 +223,6 @@ def sun():
         reposition(coordinates[0],coordinates[1])
         pen1.forward(60)
         pen1.left(22.5)
-
 
 def main():
     head()
