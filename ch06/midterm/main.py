@@ -11,9 +11,9 @@ paper = turtle.Screen()
 
 def direction1(x,y):
     '''
-    general function description
-    args: x (float) magnitude of movement, y (float) 
-    return: (type) description
+    This function allows both pen1 and pen2 to move forward and right together.
+    args: x (int) magnitude of movement, y (int) magnitude of angle
+    return: None
     '''
     pen1.forward(x)
     pen1.right(y)
@@ -21,12 +21,22 @@ def direction1(x,y):
     pen2.right(-1 * y)
 
 def direction2(x,y):
+    '''
+    This function allows both pen1 and pen2 to move forward and left together.
+    args: x (int) magnitude of movement, y (int) magnitude of angle
+    return: None
+    '''
     pen1.forward(x)
     pen1.left(y)
     pen2.forward(x)
     pen2.left(-1 * y)
 
 def curve(x,y,z):
+    '''
+    This function allows both pen1 and pen2 to move at a certain distance and angle that loops, allowing a curve to be formed.
+    args: x (int) magnitude of loop, y (int) magnitude of angle, z (int) magnitude of movement
+    return: None
+    '''
     for i in range(x):
         pen1.right(y)
         pen1.forward(z)
@@ -34,6 +44,11 @@ def curve(x,y,z):
         pen2.backward(-1 * z)
 
 def reposition(x,y):
+    '''
+    This function allows both pen1 and pen2 to move to another position on the drawing without leaving lines.
+    args: x (float) x-coordinate, y (float) y-coordinate
+    return: None
+    '''
     pen1.up()
     pen1.goto(x,y)
     pen1.down()
@@ -188,12 +203,22 @@ def head():
     # print(pen1.position())
 
 def sunrays(radians):
+    '''
+    This function allows user to calculate coordinates.
+    args: radians (float) input radians to get coordinate values
+    return: coordinates (float) coordinate points that act as the starting point for the sunrays lines to be drawn
+    '''
     coordinates = []
     coordinates.append(300 * math.cos(radians))
     coordinates.append(300 * math.sin(radians))
     return coordinates
 
 def sun():
+    '''
+    This function allows lines to be drawn extruding outwards in a circle.
+    args: None
+    return: None
+    '''
     for i in range(0,16):
         coordinates = sunrays(math.pi/8 * i)
         reposition(coordinates[0],coordinates[1])
