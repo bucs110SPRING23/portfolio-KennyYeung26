@@ -6,7 +6,7 @@ class Enemy:
         self.size = 2
         self.hitbox = 1
 
-class block:
+class Block:
     def __initi__(self):
        self.hit = 1
        self.destroy = False
