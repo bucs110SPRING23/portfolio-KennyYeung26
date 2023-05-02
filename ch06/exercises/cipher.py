@@ -21,6 +21,6 @@ def caesar_cipher(text, shift):
         result += char
     return result
 
-file = open("encrypted.txt", "a")
+file = open("encrypted-#B00933654.txt", "a")
 file.write(caesar_cipher("The quick brown fox jumps over the lazy dog", 4))
 file.close()

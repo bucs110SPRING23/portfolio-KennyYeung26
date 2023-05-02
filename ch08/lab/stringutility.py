@@ -56,6 +56,3 @@ class StringUtility:
             else:
                 string = string + self.string[i]
         return string
-
-
-            
