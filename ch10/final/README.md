@@ -8,7 +8,9 @@ N/A
 
 ## REFERENCES 
 "https://www.freecodecamp.org/news/python-list-remove-how-to-remove-an-item-from-a-list-in-python/#:~:text=The%20remove()%20method%20is,not%20by%20its%20index%20number."
+
 "https://www.fruityvice.com/"
+
 "https://pokeapi.co/docs/v2"
 
 ## MISCELLANEOUS COMMENTS 
