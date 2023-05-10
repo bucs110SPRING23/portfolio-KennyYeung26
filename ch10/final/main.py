@@ -33,10 +33,10 @@ def main():
         if weight >= 500:
             #sugar level of 3 fruits combined can't be more than 300
             if sugar1 + sugar2 + sugar3 < 300:
-                print(name + " eats " + fruit1["name"] + " for breakfast, " + fruit2["name"] + " for lunch, and " + fruit3["name"] + " for dinner.")
+                print(name + " devours a " + fruit1["name"] + " for breakfast, a " + fruit2["name"] + " for lunch, and a " + fruit3["name"] + " for dinner.")
         else:
             #sugar level of 3 fruits combined can't be more than 100
             if sugar1 + sugar2 + sugar3 < 100:
-                print(name + " eats " + fruit1["name"] + " for breakfast, " + fruit2["name"] + " for lunch, and " + fruit3["name"] + " for dinner.")
+                print(name + " eats a " + fruit1["name"] + " for breakfast, a " + fruit2["name"] + " for lunch, and a " + fruit3["name"] + " for dinner.")
 
 main()
