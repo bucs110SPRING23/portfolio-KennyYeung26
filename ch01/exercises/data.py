@@ -1,0 +1,11 @@
+print (10 * 5)
+print (10 ** 2)
+print (15 / 10)
+print (15 // 10)
+print (-15 // 10)
+print (15 % 10)
+print (10 % 15)
+print (10 % 10)
+print (0 % 10)
+print (10 / 15) 
+# The last answer is wrong because it does not give an exact number where 0.6666 is supposed to be ongoing. 
