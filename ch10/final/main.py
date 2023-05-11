@@ -13,30 +13,33 @@ def main():
 
         #user input number associated to pokemon
         pokemon_number = pokemon.get(int(input("Enter a number associated to a pokemon:")))
-        print(str(pokemon))
+        
         name = pokemon_number["name"]
         weight = pokemon_number["weight"]
+        print(str(pokemon))
 
         #each pokemon eats different fruits(no overlap)
-        fruit1 = random.choice(fruits)
+        fruit1 = fruit.get()
         sugar1 = fruit1["nutritions"]["sugar"]
-        fruits.remove(fruit1)
+        print(str(fruit))
 
-        fruit2 = random.choice(fruits)
+        fruit2 = fruit.get()
         sugar2 = fruit2["nutritions"]["sugar"]
-        fruits.remove(fruit2)
+        print(str(fruit))
 
-        fruit3 = random.choice(fruits)
+        fruit3 = fruit.get()
         sugar3 = fruit3["nutritions"]["sugar"]
-        fruits.remove(fruit3)
+        print(str(fruit))
 
         if weight >= 500:
-            #sugar level of 3 fruits combined can't be more than 300
-            if sugar1 + sugar2 + sugar3 < 300:
+            #sugar level of 3 fruits combined can't be more than 40
+            if sugar1 + sugar2 + sugar3 < 40:
                 print(name + " devours a " + fruit1["name"] + " for breakfast, a " + fruit2["name"] + " for lunch, and a " + fruit3["name"] + " for dinner.")
+        
         else:
-            #sugar level of 3 fruits combined can't be more than 100
-            if sugar1 + sugar2 + sugar3 < 100:
+            #sugar level of 3 fruits combined can't be more than 10
+            if sugar1 + sugar2 + sugar3 < 10:
                 print(name + " eats a " + fruit1["name"] + " for breakfast, a " + fruit2["name"] + " for lunch, and a " + fruit3["name"] + " for dinner.")
-
+            else:
+                print(name + " gets an upset stomach.")
 main()
