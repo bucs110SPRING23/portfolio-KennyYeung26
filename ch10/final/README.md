@@ -1,7 +1,7 @@
 # CS110 Final Exam
 
 ## SHORT DESCRIPTION
-My code asks user to first input the number of pokemon they wish to feed. Then, it asks user to input three numbers that corresponds to each pokemon which would then randomize three different meals of the day that are different from each pokemon. 
+My code asks user to first input the number of pokemon they wish to feed and then asks user to input three numbers that corresponds to each pokemon. This would then randomize three different meals of the day that are different from each pokemon, but if they consume too much sugar based on their weight, the pokemon will get an upset stomach. 
 
 ## KNOWN BUGS AND INCOMPLETE PARTS 
 N/A
