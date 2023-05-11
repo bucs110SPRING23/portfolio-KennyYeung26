@@ -41,5 +41,5 @@ def main():
             if sugar1 + sugar2 + sugar3 < 10:
                 print(name + " eats a " + fruit1["name"] + " for breakfast, a " + fruit2["name"] + " for lunch, and a " + fruit3["name"] + " for dinner.")
             else:
-                print(name + " gets an upset stomach.")
+                print(name + " eats a " + fruit1["name"] + " for breakfast, a " + fruit2["name"] + " for lunch, and a " + fruit3["name"] + " for dinner " + "but gets an upset stomach.")
 main()
